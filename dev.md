@@ -14,7 +14,7 @@
 
 ## ไฟล์ phonology.json
 
-เป็นไฟล์สำหรับใช้กำหนดการออกเสียงตามสัทวิทยา
+เป็นไฟล์สำหรับใช้กำหนดการออกเสียงตามสัทวิทยา ตามเอกสารใน https://github.com/googlei18n/language-resources/blob/master/docs/JSON_PHONOLOGY.md
 
 ## ไฟล์ txt.done.data
 
