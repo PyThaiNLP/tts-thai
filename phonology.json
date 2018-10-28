@@ -37,7 +37,7 @@
     ["c",  "consonant", "voiceless",    "palatal",  "p"],
     ["ʈ",  "consonant", "voiceless",    "retroflex",  "p"],
     ["k",  "consonant", "voiceless",    "velar",  "p"],
-	["kʰ",  "consonant", "voiceless",    "velar",  "p"],
+    ["kʰ",  "consonant", "voiceless",    "velar",  "p"],
     ["m",  "consonant", "voiced",    "bilabial",  "n"],
     ["n",  "consonant",  "voiced",    "alveolar",  "n"],
     ["ɲ",  "consonant",  "voiced",    "palatal",  "n"],
@@ -68,6 +68,8 @@
     ["oː",  "vowel", "unrounded", "mid",   "back",  "long"],
     ["ə",  "vowel", "unrounded", "mid",   "central",  "default"],
     ["əː",  "vowel", "unrounded", "mid",   "central",  "long"],
+    ["ɯː",  "vowel", "unrounded", "close",   "back",  "long"],
+    ["ɤː",  "vowel", "unrounded", "mid-high",   "back",  "long"],
 
     ["pau", "silence"]
   ]
