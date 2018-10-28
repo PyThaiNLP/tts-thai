@@ -29,10 +29,10 @@
 
   "phones": [
     ["p",  "consonant", "voiceless",    "bilabial",  "p"],
-    ["pʰ",  "consonant", "voiceless",    "bilabial",  "p"],
+    ["pʰ", "consonant", "voiceless",    "bilabial",  "p"],
     ["b",  "consonant", "voiced",    "bilabial",  "p"],
-    ["t",   "consonant", "voiceless",    "dental",  "p"],
-    ["tʰ",   "consonant", "voiceless",    "dental",  "p"],
+    ["t",  "consonant", "voiceless",    "dental",  "p"],
+    ["tʰ", "consonant", "voiceless",    "dental",  "p"],
     ["d",  "consonant", "voiced",    "dental",  "p"],
     ["c",  "consonant", "voiceless",    "palatal",  "p"],
     ["ʈ",  "consonant", "voiceless",    "retroflex",  "p"],
@@ -64,10 +64,12 @@
     ["eː",  "vowel", "unrounded", "mid",   "front",  "long"],
     ["o",  "vowel", "unrounded", "mid",   "back",  "default"],
     ["oː",  "vowel", "unrounded", "mid",   "back",  "long"],
-    ["ɯ",  "vowel", "unrounded", "close",   "back",  "long"],
+    ["ɯ",  "vowel", "unrounded", "close",   "back",  "default"],
     ["ɯː",  "vowel", "unrounded", "close",   "back",  "long"],
-    ["ɤ",  "vowel", "unrounded", "mid-high",   "back",  "long"],
+    ["ɤ",  "vowel", "unrounded", "mid-high",   "back",  "default"],
     ["ɤː",  "vowel", "unrounded", "mid-high",   "back",  "long"],
+    ["ɔ",  "vowel", "rounded", "mid-low",   "back",  "default"],
+    ["ɔː",  "vowel", "rounded", "mid-low",   "back",  "long"],
 
     ["pau", "silence"]
   ]
