@@ -56,8 +56,6 @@
 
     ["a",  "vowel", "unrounded", "open",   "back",  "default"],
     ["aː",  "vowel", "unrounded", "open",   "back",  "long"],
-    ["æ",  "vowel", "unrounded", "low",   "front",  "schwa"],
-    ["æː",  "vowel", "unrounded", "low",   "front",  "schwalong"],
     ["i",  "vowel", "unrounded", "open",   "front",  "default"],
     ["iː",  "vowel", "unrounded", "open",   "front",  "long"],
     ["u",  "vowel", "unrounded", "close",   "back",  "default"],
@@ -66,9 +64,9 @@
     ["eː",  "vowel", "unrounded", "mid",   "front",  "long"],
     ["o",  "vowel", "unrounded", "mid",   "back",  "default"],
     ["oː",  "vowel", "unrounded", "mid",   "back",  "long"],
-    ["ə",  "vowel", "unrounded", "mid",   "central",  "default"],
-    ["əː",  "vowel", "unrounded", "mid",   "central",  "long"],
+    ["ɯ",  "vowel", "unrounded", "close",   "back",  "long"],
     ["ɯː",  "vowel", "unrounded", "close",   "back",  "long"],
+    ["ɤ",  "vowel", "unrounded", "mid-high",   "back",  "long"],
     ["ɤː",  "vowel", "unrounded", "mid-high",   "back",  "long"],
 
     ["pau", "silence"]
