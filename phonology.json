@@ -24,7 +24,7 @@
 	["height2", "open" ,"high", "mid-high", "mid", "mid-low", 
         "near-low", "low", "close"],
 	["frontness2", "front", "central", "back"],
-    ["length", "default", "long","schwa", "schwalong"]
+    ["length", "default", "long","schwa", "schwalong","diphthong"]
    ],
 
   "phones": [
