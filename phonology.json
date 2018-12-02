@@ -6,7 +6,8 @@
         ["consonant","voicing", "place", "ctype"],
         ["vowel", "rounding", "height", "frontness", "length"],
 		["diph", "rounding", "height", "frontness", "rounding2", "height2", "frontness2", "length"],
-        ["silence"]
+        ["tone", "level"],
+		["silence"]
   ],
 
   "features": [
@@ -24,7 +25,8 @@
 	["height2", "open" ,"high", "mid-high", "mid", "mid-low", 
         "near-low", "low", "close"],
 	["frontness2", "front", "central", "back"],
-    ["length", "default", "long","schwa", "schwalong","diphthong"]
+    ["length", "default", "long","schwa", "schwalong","diphthong"],
+	[ "level", "low", "falling", "high","rising"]
    ],
 
   "phones": [
@@ -70,6 +72,10 @@
     ["ɤː",  "vowel", "unrounded", "mid-high",   "back",  "long"],
     ["ɔ",  "vowel", "rounded", "mid-low",   "back",  "default"],
     ["ɔː",  "vowel", "rounded", "mid-low",   "back",  "long"],
+	["àː","tone","low"],
+	["âː","tone","falling"],
+	["áː","tone","high"],
+	["ǎː","tone","rising"],
 
     ["pau", "silence"]
   ]
