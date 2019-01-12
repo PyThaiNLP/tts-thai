@@ -11,7 +11,7 @@
   ],
 
   "features": [
-    ["vc", "consonant", "vowel", "diph", "silence"],
+    ["vc", "consonant", "vowel", "diph","tone", "silence"],
     ["voicing", "voiced", "voiceless"],
     ["place", "bilabial", "labiodental", "alveolar", "lateral", 
         "post-alveolar", "retroflex", "palatal", "velar", 
@@ -64,6 +64,7 @@
     ["uː",  "vowel", "unrounded", "close",   "back",  "long"],
     ["e",  "vowel", "unrounded", "mid",   "front",  "default"],
     ["eː",  "vowel", "unrounded", "mid",   "front",  "long"],
+    ["ɛː",  "vowel", "unrounded", "mid",   "front",  "long"],
     ["o",  "vowel", "unrounded", "mid",   "back",  "default"],
     ["oː",  "vowel", "unrounded", "mid",   "back",  "long"],
     ["ɯ",  "vowel", "unrounded", "close",   "back",  "default"],
