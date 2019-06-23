@@ -5,28 +5,25 @@
   "feature_types" : [
         ["consonant","voicing", "place", "ctype"],
         ["vowel", "rounding", "height", "frontness", "length"],
-		["diph", "rounding", "height", "frontness", "rounding2", "height2", "frontness2", "length"],
-        ["tone", "level"],
-		["silence"]
+        ["diph", "rounding", "height", "frontness", "rounding2", "height2", "frontness2", "length"],
+        ["tone", "level2"],
+        ["silence"]
   ],
 
   "features": [
     ["vc", "consonant", "vowel", "diph","tone", "silence"],
     ["voicing", "voiced", "voiceless"],
-    ["place", "bilabial", "labiodental", "alveolar", "lateral", 
-        "post-alveolar", "retroflex", "palatal", "velar", 
-        "labio-velar", "dental", "glottal"],
+    ["place", "bilabial", "labiodental", "alveolar", "lateral", "post-alveolar", "retroflex", "palatal", "velar", "labio-velar", "dental", "glottal"],
     ["ctype", "s", "f", "a", "n", "l", "r", "p"],
     ["rounding", "unrounded", "rounded"],
-    ["height", "open" ,"high", "mid-high", "mid", "mid-low", 
-        "near-low", "low", "close"],
+    ["height", "open" ,"high", "mid-high", "mid", "mid-low", "near-low", "low", "close"],
     ["frontness", "front", "central", "back"],
-	["rounding2", "unrounded", "rounded"],
-	["height2", "open" ,"high", "mid-high", "mid", "mid-low", 
-        "near-low", "low", "close"],
-	["frontness2", "front", "central", "back"],
+    ["rounding2", "unrounded", "rounded"],
+    ["height2", "open" ,"high", "mid-high", "mid", "mid-low", "near-low", "low", "close"],
+    ["frontness2", "front", "central", "back"],
     ["length", "default", "long","schwa", "schwalong","diphthong"],
-	[ "level", "low", "falling", "high","rising"]
+    [ "level", "low", "falling", "high","rising"]
+    [ "level2", "1", "2", "3","4"]
    ],
 
   "phones": [
@@ -73,11 +70,10 @@
     ["ɤː",  "vowel", "unrounded", "mid-high",   "back",  "long"],
     ["ɔ",  "vowel", "rounded", "mid-low",   "back",  "default"],
     ["ɔː",  "vowel", "rounded", "mid-low",   "back",  "long"],
-	["àː","tone","low"],
-	["âː","tone","falling"],
-	["áː","tone","high"],
-	["ǎː","tone","rising"],
-
+    ["1","tone","1"],
+    ["2","tone","2"],
+    ["3","tone","3"],
+    ["4","tone","4"],
     ["pau", "silence"]
   ]
 }
