@@ -6,7 +6,7 @@
     ["consonant","voicing", "place", "ctype"],
     ["vowel", "rounding", "height", "frontness", "length"],
     ["diph", "rounding", "height", "frontness", "rounding2", "height2", "frontness2", "length"],
-    ["tone", "level2"],
+    ["tone", "level"],
     ["silence"]
   ],
 
@@ -70,10 +70,10 @@
     ["ɤː",  "vowel", "unrounded", "mid-high",   "back",  "long"],
     ["ɔ",  "vowel", "rounded", "mid-low",   "back",  "default"],
     ["ɔː",  "vowel", "rounded", "mid-low",   "back",  "long"],
-    ["1","tone","1"],
-    ["2","tone","2"],
-    ["3","tone","3"],
-    ["4","tone","4"],
+    ["1","tone","low"],
+    ["2","tone","falling"],
+    ["3","tone","high"],
+    ["4","tone","rising"],
     ["pau", "silence"]
   ]
 }
