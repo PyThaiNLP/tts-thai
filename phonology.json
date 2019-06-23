@@ -66,6 +66,7 @@
     ["uː",  "vowel", "unrounded", "close",   "back",  "long"],
     ["e",  "vowel", "unrounded", "mid",   "front",  "default"],
     ["eː",  "vowel", "unrounded", "mid",   "front",  "long"],
+    ["ɛ",  "vowel", "unrounded", "mid-low",   "front",  "default"],
     ["ɛː",  "vowel", "unrounded", "mid",   "front",  "long"],
     ["o",  "vowel", "unrounded", "mid",   "back",  "default"],
     ["oː",  "vowel", "unrounded", "mid",   "back",  "long"],
