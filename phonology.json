@@ -5,7 +5,7 @@
   "feature_types" : [
     ["consonant","voicing", "place", "ctype"],
     ["vowel", "rounding", "height", "frontness", "length"],
-    ["diph", "rounding", "height", "frontness", "rounding2", "height2", "frontness2", "length"],
+    ["diph", "frontness","length"],
     ["tone", "level"],
     ["silence"]
   ],
@@ -22,8 +22,8 @@
     ["height2", "open" ,"high", "mid-high", "mid", "mid-low", "near-low", "low", "close"],
     ["frontness2", "front", "central", "back"],
     ["length", "default", "long","schwa", "schwalong","diphthong"],
-    [ "level", "low", "falling", "high","rising"],
-    [ "level2", "1", "2", "3","4"]
+    ["level", "low", "falling", "high","rising"],
+    ["level2", "1", "2", "3","4"]
    ],
 
   "phones": [
@@ -74,6 +74,12 @@
     ["2","tone","falling"],
     ["3","tone","high"],
     ["4","tone","rising"],
+    ["ia","diph","front","diphthong"],
+    ["iaʔ","diph","front","diphthong"],
+    ["ɯaʔ","diph","central","diphthong"],
+    ["ɯa","diph","central","diphthong"],
+    ["uaʔ","diph","back","diphthong"],
+    ["ua","diph","back","diphthong"],
     ["pau", "silence"]
   ]
 }
