@@ -50,6 +50,7 @@
     ["w",  "consonant",  "voiced",    "bilabial",  "a"],
     ["j",  "consonant",  "voiced",    "palatal",  "a"],
     ["tɕ",  "consonant",  "voiceless",    "palatal",  "a"],
+    ["t͡ɕ",  "consonant",  "voiceless",    "palatal",  "a"],
     ["tɕʰ",  "consonant",  "voiceless",    "palatal",  "a"],
     ["ʔ",  "consonant",  "voiceless",    "glottal",  "p"],
 
