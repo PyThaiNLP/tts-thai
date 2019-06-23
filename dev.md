@@ -14,6 +14,12 @@
 
 โดย 0 or 1 is the stress level ส่วน () ใส่ตามจำนวนพยางค์ให้ครบทุกอัน
 
+หากมีตั้งแต่ 2 พยางค์ขึ้นไป ทำตามนี้
+
+```scheme
+("สามัญ" nil (((s aː 4) 1) ((m a n) 1)))
+```
+
 ## ไฟล์ phonology.json
 
 เป็นไฟล์สำหรับใช้กำหนดการออกเสียงตามสัทวิทยา ตามเอกสารใน https://github.com/googlei18n/language-resources/blob/master/docs/JSON_PHONOLOGY.md
