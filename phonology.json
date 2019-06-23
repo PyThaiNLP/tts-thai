@@ -3,11 +3,11 @@
 
 
   "feature_types" : [
-        ["consonant","voicing", "place", "ctype"],
-        ["vowel", "rounding", "height", "frontness", "length"],
-        ["diph", "rounding", "height", "frontness", "rounding2", "height2", "frontness2", "length"],
-        ["tone", "level2"],
-        ["silence"]
+    ["consonant","voicing", "place", "ctype"],
+    ["vowel", "rounding", "height", "frontness", "length"],
+    ["diph", "rounding", "height", "frontness", "rounding2", "height2", "frontness2", "length"],
+    ["tone", "level2"],
+    ["silence"]
   ],
 
   "features": [
@@ -22,7 +22,7 @@
     ["height2", "open" ,"high", "mid-high", "mid", "mid-low", "near-low", "low", "close"],
     ["frontness2", "front", "central", "back"],
     ["length", "default", "long","schwa", "schwalong","diphthong"],
-    [ "level", "low", "falling", "high","rising"]
+    [ "level", "low", "falling", "high","rising"],
     [ "level2", "1", "2", "3","4"]
    ],
 
