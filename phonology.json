@@ -55,6 +55,7 @@
     ["tɕ",  "consonant",  "voiceless",    "palatal",  "a"],
     ["t͡ɕ",  "consonant",  "voiceless",    "palatal",  "a"],
     ["tɕʰ",  "consonant",  "voiceless",    "palatal",  "a"],
+    ["t͡ɕʰ",  "consonant",  "voiceless",    "palatal",  "a"],
     ["ʔ",  "consonant",  "voiceless",    "glottal",  "p"],
 
     ["a",  "vowel", "unrounded", "open",   "back",  "default"],
