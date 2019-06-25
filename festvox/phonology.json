@@ -18,12 +18,8 @@
     ["rounding", "unrounded", "rounded"],
     ["height", "open" ,"high", "mid-high", "mid", "mid-low", "near-low", "low", "close"],
     ["frontness", "front", "central", "back"],
-    ["rounding2", "unrounded", "rounded"],
-    ["height2", "open" ,"high", "mid-high", "mid", "mid-low", "near-low", "low", "close"],
-    ["frontness2", "front", "central", "back"],
     ["length", "default", "long","schwa", "schwalong","diphthong"],
-    ["level", "low", "falling", "high","rising"],
-    ["level2", "1", "2", "3","4"]
+    ["level", "low", "falling", "high","rising"]
    ],
 
   "phones": [
