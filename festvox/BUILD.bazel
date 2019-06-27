@@ -22,13 +22,13 @@ load("//festival_utils:festvox.bzl", "festvox")
 """
 Usage
     Test phonology
-        bazel test //si/festvox:phonology_test
+        bazel test //th/festvox:phonology_test
 
     Generate festvox lexicon (lexicon.scm)
-        bazel build //si/festvox:make_lexicon_scm
+        bazel build //th/festvox:make_lexicon_scm
 
     Generate festvox prompts file (aka txt.done.data)
-        bazel build //si/festvox:make_festvox_prompts
+        bazel build //th/festvox:make_festvox_prompts
 """
 
 festvox(
