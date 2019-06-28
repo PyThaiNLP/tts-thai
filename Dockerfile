@@ -27,6 +27,7 @@ RUN apt-get install -y \
       python-setuptools \
       unzip \
       wget \
+      nano \
       && rm -rf /var/lib/apt/lists/*
 
 # Clone language resources
