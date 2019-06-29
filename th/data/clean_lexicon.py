@@ -9,5 +9,5 @@ t=""
 for i in listd:
  t+=i+'\t'+d[i]+'\n'
 with open('lexicon.tsv','w',encoding='utf-8') as f:
- f.write(t)
+ f.write(t.replace(' ʰ',''))
 
