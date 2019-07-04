@@ -1,6 +1,6 @@
 # สร้าง Text to Speech ภาษาไทย (และภาษาอื่น ๆ ) ง่าย ๆ ด้วยตัวคุณเอง
 
-***Text to speech นี้เป็นโปรเจคที่ผมทำในช่วงฝึกงาน IST ที่สถาบันวิทยสิริเมธี***
+**Text to speech นี้เป็นโปรเจคที่ผมทำในช่วงฝึกงานที่ สำนักวิชาวิทยาศาสตร์และเทคโนโลยีสารสนเทศ (School of Information Science and Technology: IST) สถาบันวิทยสิริเมธี**
 
 licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0).
 
