@@ -114,3 +114,6 @@ COPY th.zip /usr/local/src/tools/language-resources/th.zip
 RUN unzip th.zip
 COPY wavs.zip /usr/local/src/tools/language-resources/wavs.zip
 RUN unzip wavs.zip
+ENV WAV_FOLDER /usr/local/src/tools/language-resources/wavs
+RUN mkdir tts
+ENV OUTPUT_VOICE_FOLDER /usr/local/src/tools/language-resources/tts
