@@ -8,10 +8,6 @@
 
 บทความนี้ผมจะใช้ชุดข้อมูลเสียงชื่อ TSynC-1 ของเนคเทค ซึ่งเป็น CC-BY-SA-NC 3.0 ซึ่งอนุญาตให้งานได้ โดยต้องอ้างอิง ไม่ใช้ในทางการค้า
 
-โหลดได้ที่ https://www.nectec.or.th/corpus/index.php?league=sa สร้างโฟลเดอร์ตั้งชื่อว่า wavs ใช้เก็บไฟล์เสียง .wav
-
-ไฟล์กำกับข้อความ โหลดได้ที่ http://vaja.nectec.or.th/tsync_data.txt
-
 ดังนั้น Text to speech นี้ สามารถใช้งานได้เฉพาะที่ไม่ใช้เชิงการค้า หากคุณต้องการทำหรือทดลองสร้าง text to speech ทดลองทำตามบทความนี้ได้เลยครับ
 
 **ความต้องการของบทความนี้**
@@ -21,16 +17,10 @@
 - เนื้อที่ว่างมากกว่า 20 GB ขึ้นไป
 - CPU 2 GHz ขึ้นไป
 - สามารถรันได้ต่อเนื่องมากกว่า 6 ชั่วโมง
-- Docker
+- Docker , python
 - อินเทอร์เน็ต สำหรับติดตั้งเครื่องมือทำ Text to speech
 
-สำหรับขั้นตอนในการทำ Text to speech ค่อนข้าง Geek (**คำเตือน ถ้าคุณไม่เข้าใจ อย่าเศร้า !!!**) มีขั้นตอนมากมายกว่าจะได้ Text to speech นี้
-
-------
-
-ผมจึงศึกษารูปแบบข้อมูลที่กูเกิลใช้งาน โดยผลการศึกษาได้ข้อมูล 
-
-กูเกิลสร้างโฟลเดอร์เป็นรหัสภาษา เช่น ภาษา ใช้รหัส
+ผมจึงศึกษารูปแบบข้อมูลที่กูเกิลใช้งาน โดยผลการศึกษาได้ข้อมูลว่ากูเกิลสร้างโฟลเดอร์เป็นรหัสภาษา เช่น ภาษา Bangla ใช้รหัส bn
 
 สำหรับภาษาไทย เราจะสร้างโฟลเดอร์ชื่อ th ภายในประกอบไปด้วยโฟลเดอร์หลายอัน แต่อันที่เกี่ยวข้องกับ Text to speech มีดังนี้ 
 
@@ -49,6 +39,36 @@
 - lexicon.scm - ไฟล์คำศัพท์ที่ส่งออกมาจาก data 
 - phonology.json - เป็นไฟล์สำหรับใช้กำหนดการออกเสียงตามสัทวิทยา 
 - txt.done.data - ไฟล์กำกับเสียงว่าพูดอะไร ส่งออกมาจาก data 
+
+สำหรับขั้นตอนในการทำ Text to speech ค่อนข้าง Geek (**คำเตือน ถ้าคุณไม่เข้าใจ อย่าเศร้า !!!**) มีขั้นตอนมากมายกว่าจะได้ Text to speech นี้
+
+1. โหลดข้อมูล
+2. สร้างไฟล์ prompts.tsv
+3. สร้าง phonology.json
+4. สร้างไฟล์ lexicon.tsv
+5. สร้างไฟล์ lexicon.scm และ txt.done.data
+6. สร้างไฟล์ BUILD.bazel
+7. ติดตั้ง Docker สำหรับทำ Text to speech ภาษาไทย
+8. ทดสอบไฟล์
+9. Train
+10. สังเคราะห์เสียง
+
+------
+
+**โหลดข้อมูล**
+
+โหลดได้ที่ https://www.nectec.or.th/corpus/index.php?league=sa สร้างโฟลเดอร์ตั้งชื่อว่า wavs ใช้เก็บไฟล์เสียง .wav แล้วทำการเปลี่ยน sample rate เสียงทั้งหมดให้เป็น 16000 Hz โดยใช้โค้ดดังนี้
+
+```python
+from subprocess import call
+import glob
+path_old="./wavs-old/" # โพลเดอร์เสียง
+path_new="./wavs/" # โฟลเดอร์ที่ต้องการเก็บเสียงที่ผ่านการแปลง sample rate
+for file in glob.glob(path_old+"*.wav"):
+ call(['ffmpeg','-i',file,'-ar','16000',path_new+file.replace(path_old,'')])
+```
+
+ไฟล์กำกับข้อความ โหลดได้ที่ http://vaja.nectec.or.th/tsync_data.txt หรือ โหลดไฟล์ที่กำกับคำอ่านไว้แล้ว ได้ที่  https://gist.github.com/wannaphongcom/47b9b3618b2e54d88be39d5425be3795
 
 ------
 
@@ -246,11 +266,11 @@ echo 'ประเทศไทย ได้ มี การ ปรับ เป
 ### แหล่งอ้างอิง
 
 - Language Resources and Tools - Google https://github.com/google/language-resources
-- How to build phonology.json (consonant , vowel , tone marke) with IPA? https://github.com/google/language-resources/issues/14
-- I can't train thai language. https://github.com/google/language-resources/issues/25
+- How to build phonology.json (consonant , vowel , tone marke) with IPA? - https://github.com/google/language-resources/issues/14
+- I can't train thai language. - https://github.com/google/language-resources/issues/25
 - SLTU 2016 Tutorial - https://sites.google.com/site/sltututorial/overview
-- Text Normalization for Bangla, Khmer, Nepali, Javanese, Sinhala, and Sundanese TTS Systems https://ai.google/research/pubs/pub47344
-- A Step-by-Step Process for Building TTS Voices Using Open Source Data and Framework for Bangla, Javanese, Khmer, Nepali, Sinhala, and Sundanese https://ai.google/research/pubs/pub47347
+- Text Normalization for Bangla, Khmer, Nepali, Javanese, Sinhala, and Sundanese TTS Systems - https://ai.google/research/pubs/pub47344
+- A Step-by-Step Process for Building TTS Voices Using Open Source Data and Framework for Bangla, Javanese, Khmer, Nepali, Sinhala, and Sundanese - https://ai.google/research/pubs/pub47347
 
 ------
 
@@ -258,11 +278,13 @@ echo 'ประเทศไทย ได้ มี การ ปรับ เป
 
 แน่นอน เสียงที่ได้มา หากจะยังไม่ถูกใจ แนะนำให้ลองอัดเสียง โดยอัดเสียงตามข้อความในคลัง และเพิ่มเติมคำศัพท์พร้อมข้อความเข้าไปด้วย 
 
-โดยสเปคไฟล์เสียงที่ต้องการ sample rate ต้องเป็น 16000 จึงจะเหมาะสม (ถ้าเกินให้ลด sample rate ลงมา)  และนามสกุลไฟล์จะต้องเป็น .wav
+โดยสเปคไฟล์เสียงที่ต้องการ sample rate ต้องเป็น 16000 Hz จึงจะเหมาะสม (ถ้าเกินให้ลด sample rate ลงมา)  และนามสกุลไฟล์จะต้องเป็น .wav
 
-ส่วนชุดข้อมูล TSynC-1 ของเนคเทค ที่เราใช้ในบทความนี้ มี sample rate เป็น 8000 ทำให้ผมต้องเพิ่ม sample rate เข้าไปให่กลายเป็น 16000 เพราะถ้าใช้ sample rate เป็น 8000 เสียงจะเพี้ยนมากจนฟังไม่รู้เรื่อง และข้อมูลเสียงยังไม่มาก ไม่ครอบคลุมคำบางโดเมน เพราะ ชุดข้อมูล TSynC-1 อยู่ในโดเมนบทความวิชาการ สารานุกรม ถ้าจะทำจริง ต้องให้หลากหลายโดเมน แถมเรายังไม่ได้ปรับปรุงโมเดลเสียง
+ส่วนชุดข้อมูล TSynC-1 ของเนคเทค ที่เราใช้ในบทความนี้ มี sample rate เป็น 8000 Hz ทำให้ผมต้องเพิ่ม sample rate เข้าไปให่กลายเป็น 16000 Hz เพราะถ้าใช้ sample rate เป็น 8000 Hz เสียงจะเพี้ยนมากจนฟังไม่รู้เรื่อง และข้อมูลเสียงยังไม่มาก ไม่ครอบคลุมคำบางโดเมน เพราะ ชุดข้อมูล TSynC-1 อยู่ในโดเมนบทความวิชาการ สารานุกรม ถ้าจะทำจริง ต้องให้หลากหลายโดเมน แถมเรายังไม่ได้ปรับปรุงโมเดลเสียง
 
 นอกจากนั้น เราสามารถปรับปรุงคุณภาพของเสียงได้ โดยทำตามเอกสารที่กูเกิลทำไว้ที่ https://sites.google.com/site/sltututorial/tutorial
+
+ส่วนโมเดลเสียงเราใช้ HMM ในการทำ text to speech และในเอกสารของกูเกิลมีสอนทำ Text to speech ด้วย Merlin TTS หากสนใจเข้าไปศึกษาได้จาก https://github.com/google/language-resources
 
 ------
 
@@ -270,11 +292,11 @@ echo 'ประเทศไทย ได้ มี การ ปรับ เป
 
 
 
-ขอขอบคุณสถาบันวิทยสิริเมธี 
-
-ขอขอบคุณมหาวิทยาลัยธรรมศาสตร์
+ขอขอบคุณสถาบันวิทยสิริเมธี
 
 ขอบคุณกูเกิล สำหรับโปรเจคดี ๆ ที่เผยแพร่แก่สาธารณะ
+
+
 
 วรรณพงษ์ ภัททิยไพบูลย์
 
