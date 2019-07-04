@@ -21,11 +21,17 @@ docker pull wannaphong/thaitts
 docker run -d -p 5000:5000 wannaphong/thaitts
 ```
 
-use :
+Use :
 
 ```
 http://127.0.0.1:5000/tts?text=ทดสอบ ระบบ
 ```
+
+Leave a space between words and Use Thai words only.
+
+## Audio Example
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/818282574&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 
 ## License
 

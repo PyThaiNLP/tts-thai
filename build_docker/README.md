@@ -92,7 +92,21 @@ for file in glob.glob(path_old+"*.wav"):
 
 และขึ้นบรรทัดใหม่ด้วย \n 
 
-ผมจึงนำไฟล์ข้อมูลข้อความกำกับเสียง TSynC-1 (http://vaja.nectec.or.th/tsync_data.txt) ทำการเปลี่ยนข้อความเหล่านั้นให้กลายเป็นคำอ่าน เช่น พ.ศ. -> พอศอ ไม่ให้เหลืออักษรพิเศษหรือตัวเลข เสร็จแล้วมาตัดคำโดยใช้ PyThaiNLP และเว้นชื่อไฟล์ตามรูปแบบของ prompts.tsv (ขั้นตอนนี้ถือเป็นโจทย์ ไม่ขอเฉลย) แต่ถ้าไม่อยากกำกับเอง ผมทำไว้แล้วที่ https://gist.github.com/wannaphongcom/47b9b3618b2e54d88be39d5425be3795 เป็นไฟล์ csv แบ่งด้วย | ประกอบด้วย ชื่อไฟล์|ข้อความ|ข้อความคำอ่าน
+ผมจึงนำไฟล์ข้อมูลข้อความกำกับเสียง TSynC-1 (http://vaja.nectec.or.th/tsync_data.txt) ทำการเปลี่ยนข้อความเหล่านั้นให้กลายเป็นคำอ่าน เช่น พ.ศ. -> พอศอ ไม่ให้เหลืออักษรพิเศษหรือตัวเลข เสร็จแล้วมาตัดคำโดยใช้ PyThaiNLP และเว้นชื่อไฟล์ตามรูปแบบของ prompts.tsv
+
+แต่ถ้าไม่อยากกำกับเอง ผมทำไว้แล้วที่ https://gist.github.com/wannaphongcom/47b9b3618b2e54d88be39d5425be3795 เป็นไฟล์ csv แบ่งด้วย | ประกอบด้วย ชื่อไฟล์|ข้อความ|ข้อความคำอ่าน และแปลงเป็นไฟล์ prompts.tsv ได้ด้วยโค้ด
+
+```python
+from pythainlp.tokenize import word_tokenize
+import pandas as pd
+file=pd.read_csv('metadata.csv',sep='|',names=['id','text','text2'])
+wordall=[]
+text=""
+for _,i in file.iterrows():
+    text+=i['id']+'	'+' '.join(word_tokenize(i['text2'].replace('"','').replace(')','').replace('(','').replace("'",'')))+'\n'
+with open("prompts.tsv","w",encoding="utf-8") as f:
+ f.write(text)
+```
 
 ------
 
