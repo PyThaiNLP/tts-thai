@@ -2,6 +2,8 @@
 
 ***Text to speech นี้เป็นโปรเจคที่ผมทำในช่วงฝึกงาน IST ที่สถาบันวิทยสิริเมธี***
 
+licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0).
+
 หลังจากที่ผมล้มเหลวมานับไม่ถ้วนกับ Text to speech ผมไปค้น GitHub นับหลายวัน จนไปเจอว่า Google ทำ TTS จากภาษาที่มีทรัพยากรต่ำ https://github.com/google/language-resources
 
 เมื่อผมเข้าไปศึกษาพบว่า หลายภาษากูเกิลใช้ IPA ในการกำกับเสียงในการทำ Text to speech ผมเลยเกิดความคิด ถ้านำมาใช้กับภาษาไทยล่ะ ? ภาษาไทยเรามีข้อมูลทำ G2P ที่น้อยมาก ผมเลยนึกถึง IPA กับภาษาไทย น่าจะใช้ทดแทน G2P ภาษาไทยได้
@@ -263,17 +265,6 @@ echo 'ประเทศไทย ได้ มี การ ปรับ เป
 
 ------
 
-### แหล่งอ้างอิง
-
-- Language Resources and Tools - Google https://github.com/google/language-resources
-- How to build phonology.json (consonant , vowel , tone marke) with IPA? - https://github.com/google/language-resources/issues/14
-- I can't train thai language. - https://github.com/google/language-resources/issues/25
-- SLTU 2016 Tutorial - https://sites.google.com/site/sltututorial/overview
-- Text Normalization for Bangla, Khmer, Nepali, Javanese, Sinhala, and Sundanese TTS Systems - https://ai.google/research/pubs/pub47344
-- A Step-by-Step Process for Building TTS Voices Using Open Source Data and Framework for Bangla, Javanese, Khmer, Nepali, Sinhala, and Sundanese - https://ai.google/research/pubs/pub47347
-
-------
-
 ### ทำไมเสียงที่ได้จึงเพี้ยน
 
 แน่นอน เสียงที่ได้มา หากจะยังไม่ถูกใจ แนะนำให้ลองอัดเสียง โดยอัดเสียงตามข้อความในคลัง และเพิ่มเติมคำศัพท์พร้อมข้อความเข้าไปด้วย 
@@ -284,7 +275,7 @@ echo 'ประเทศไทย ได้ มี การ ปรับ เป
 
 นอกจากนั้น เราสามารถปรับปรุงคุณภาพของเสียงได้ โดยทำตามเอกสารที่กูเกิลทำไว้ที่ https://sites.google.com/site/sltututorial/tutorial
 
-ส่วนโมเดลเสียงเราใช้ HMM ในการทำ text to speech และในเอกสารของกูเกิลมีสอนทำ Text to speech ด้วย Merlin TTS หากสนใจเข้าไปศึกษาได้จาก https://github.com/google/language-resources
+ส่วนโมเดลเสียงเราใช้ Hidden Markov Model-based speech synthesis (HMM) ในการทำ text to speech และในเอกสารของกูเกิลมีสอนทำ Text to speech ด้วย Merlin TTS หากสนใจเข้าไปศึกษาได้จาก https://github.com/google/language-resources
 
 ------
 
@@ -307,3 +298,14 @@ wannaphong@kkumail.com
 คณะวิทยาศาสตร์ประยุกต์และวิศวกรรมศาสตร์
 
 มหาวิทยาลัยขอนแก่น วิทยาเขตหนองคาย
+
+------
+
+### แหล่งอ้างอิง
+
+- Language Resources and Tools - Google https://github.com/google/language-resources
+- How to build phonology.json (consonant , vowel , tone marke) with IPA? - https://github.com/google/language-resources/issues/14
+- I can't train thai language. - https://github.com/google/language-resources/issues/25
+- SLTU 2016 Tutorial - https://sites.google.com/site/sltututorial/overview
+- Text Normalization for Bangla, Khmer, Nepali, Javanese, Sinhala, and Sundanese TTS Systems - https://ai.google/research/pubs/pub47344
+- A Step-by-Step Process for Building TTS Voices Using Open Source Data and Framework for Bangla, Javanese, Khmer, Nepali, Sinhala, and Sundanese - https://ai.google/research/pubs/pub47347

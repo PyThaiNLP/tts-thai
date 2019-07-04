@@ -4,6 +4,8 @@
 
 I build Thai text to speech from [Language Resources (Google) tools](https://github.com/google/language-resources). You can use Thai TTS in docker.
 
+***Please create a voice data set if used for business purposes.***
+
 ## Build
 
 Build own Thai text to speech (Thai language) : https://github.com/wannaphongcom/tts-thai/tree/master/build_docker
@@ -24,6 +26,12 @@ use :
 ```
 http://127.0.0.1:5000/tts?text=ทดสอบ ระบบ
 ```
+
+## License
+
+Source code : licensed under an [Apache License, Version 2.0](LICENSE).
+
+Datasets , Data and Docs : licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0).
 
 
 
