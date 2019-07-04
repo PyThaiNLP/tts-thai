@@ -168,7 +168,7 @@ python clean_lexicon.py
 
 ```
 cat data/lexicon.tsv | python festival_lexicon_from_tsv.py > festvox/lexicon.scm
-cat data/prompts.tsv | python festival_prompts_from_tsv.py > txt.done.data
+cat data/prompts.tsv | python festival_prompts_from_tsv.py > festvox/txt.done.data
 ```
 
 ------
