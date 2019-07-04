@@ -13,7 +13,9 @@ use :
 http://127.0.0.1:5000/tts?text=ทดสอบ ระบบ
 ```
 
-Source code :
+Leave a space between words and Use Thai words only.
+
+**Source code** :
 
 - app.py
 - make5.zip :  https://drive.google.com/file/d/1jABkRQNwP02KyhngSFPIY61pF0vpxfj7/view?usp=sharing
