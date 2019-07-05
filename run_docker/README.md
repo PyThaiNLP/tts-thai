@@ -22,6 +22,6 @@ Leave a space between words and Use Thai words only.
 
 ## License
 
-Source code : licensed under an [Apache License, Version 2.0](LICENSE).
+Source code : licensed under an [Apache License, Version 2.0](https://github.com/PyThaiNLP/tts-thai/blob/master/LICENSE).
 
 Datasets , Data and Docs : licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0).
