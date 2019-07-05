@@ -4,7 +4,7 @@
 
 licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0).
 
-หลังจากที่ผมล้มเหลวมานับไม่ถ้วนกับ Text to speech ผมไปค้น GitHub นับหลายวัน จนไปเจอว่า Google ทำ TTS จากภาษาที่มีทรัพยากรต่ำ https://github.com/google/language-resources
+หลังจากที่ผมล้มเหลวมานับไม่ถ้วนกับ Text to speech (ก่อนหน้านี้ลองกับ Tacotron ล้มเหลว) ผมไปค้น GitHub นับหลายวัน จนไปเจอว่า Google ทำ TTS จากภาษาที่มีทรัพยากรต่ำ https://github.com/google/language-resources
 
 เมื่อผมเข้าไปศึกษาพบว่า หลายภาษากูเกิลใช้ IPA ในการกำกับเสียงในการทำ Text to speech ผมเลยเกิดความคิด ถ้านำมาใช้กับภาษาไทยล่ะ ? ภาษาไทยเรามีข้อมูลทำ G2P ที่น้อยมาก ผมเลยนึกถึง IPA กับภาษาไทย น่าจะใช้ทดแทน G2P ภาษาไทยได้
 
@@ -297,7 +297,7 @@ echo 'ประเทศไทย ได้ มี การ ปรับ เป
 
 
 
-ขอขอขอบคุณสถาบันวิทยสิริเมธี
+ขอขอบคุณสถาบันวิทยสิริเมธี
 
 ขอขอบคุณกูเกิล สำหรับโปรเจคดี ๆ ที่เผยแพร่แก่สาธารณะ
 
