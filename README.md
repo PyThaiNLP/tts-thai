@@ -1,10 +1,10 @@
 # Thai Text to Speech (Thai TTS)
 
-*Open Source Thai Text to speech*
+*Open Source Thai Text to Speech*
 
 I build Thai text to speech from [Language Resources (Google) tools](https://github.com/google/language-resources). You can use Thai TTS in docker.
 
-***Please create a voice data set if used for business purposes.***
+***Please create a voice dataset and re-train if used for business purposes.***
 
 ## Build
 
