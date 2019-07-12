@@ -108,11 +108,11 @@ ENV EXDIR /usr/local/src/tools/examples
 # Add festival to path
 ENV PATH="/usr/local/src/tools/festival/bin:${PATH}"
 
-WORKDIR /usr/local/src/tools/language-resources
-COPY th.zip /usr/local/src/tools/language-resources/th.zip
+WORKDIR /usr/local/src/language-resources
+COPY th.zip /usr/local/src/language-resources/th.zip
 RUN unzip th.zip
-COPY wavs.zip /usr/local/src/tools/language-resources/wavs.zip
+COPY wavs.zip /usr/local/src/language-resources/wavs.zip
 RUN unzip wavs.zip
-ENV WAV_FOLDER /usr/local/src/tools/language-resources/wavs
+ENV WAV_FOLDER /usr/local/src/language-resources/wavs
 RUN mkdir tts
-ENV OUTPUT_VOICE_FOLDER /usr/local/src/tools/language-resources/tts
+ENV OUTPUT_VOICE_FOLDER /usr/local/src/language-resources/tts
