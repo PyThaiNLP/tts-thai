@@ -217,6 +217,12 @@ sudo docker build -t tts:1 .
 
 เราจะได้ container ชื่อ tts:1 พร้อมให้ train โดยผมสร้างให้มันโหลดไฟล์เข้าไปและตั้งค่า path ให้
 
+รันด้วยคำสั่ง
+
+```
+docker run -it tts:1
+```
+
 หากไม่ต้องการรันด้วย docker จะต้องทำตามขั้นตอนดังนี้ (แนะนำให้ใช้ docker ดีกว่าติดตั้งเอง)
 
 clone https://github.com/google/language-resources มา แล้วรันคำสั่ง ./festival_utils/setup_festival.sh
