@@ -27,8 +27,7 @@ RUN apt-get install -y \
       python-setuptools \
       unzip \
       wget \
-      nano \
-      && rm -rf /var/lib/apt/lists/*
+      nano
 
 # Clone language resources
 WORKDIR /usr/local/src
