@@ -250,7 +250,7 @@ export OUTPUT_VOICE_FOLDER=<your desired path to store output voice>
 ว่าสามารถ build ได้หรือไม่
 
 - Lexicon - ```bazel build //th/festvox:make_lexicon_scm```
-- Festival prompts -  ```bazel build //th/festvox:make_txt_done_data ```
+- Festival prompts -  ```bazel build //th/festvox:make_festvox_prompts```
 
 ------
 
@@ -259,7 +259,7 @@ export OUTPUT_VOICE_FOLDER=<your desired path to store output voice>
 รอประมาณ 6 ชั่วโมง โดยใช้คำสั่ง
 
 ```
-./festival_utils/build_festvox_voice.sh ${WAV_FOLDER} af ${OUTPUT_VOICE_FOLDER}
+./festival_utils/build_festvox_voice.sh ${WAV_FOLDER} th ${OUTPUT_VOICE_FOLDER}
 ```
 
 ------
