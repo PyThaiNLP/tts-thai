@@ -70,7 +70,7 @@ for file in glob.glob(path_old+"*.wav"):
  call(['ffmpeg','-i',file,'-ar','16000',path_new+file.replace(path_old,'')])
 ```
 
-ไฟล์กำกับข้อความ โหลดได้ที่ http://vaja.nectec.or.th/tsync_data.txt หรือ โหลดไฟล์ที่กำกับคำอ่านไว้แล้ว ได้ที่  https://gist.github.com/wannaphongcom/47b9b3618b2e54d88be39d5425be3795
+ไฟล์กำกับข้อความ โหลดได้ที่ http://vaja.nectec.or.th/tsync_data.txt หรือ โหลดไฟล์ที่กำกับคำอ่านไว้แล้ว ได้ที่  https://gist.github.com/wannaphong/47b9b3618b2e54d88be39d5425be3795
 
 ------
 
@@ -94,7 +94,7 @@ for file in glob.glob(path_old+"*.wav"):
 
 ผมจึงนำไฟล์ข้อมูลข้อความกำกับเสียง TSynC-1 (http://vaja.nectec.or.th/tsync_data.txt) ทำการเปลี่ยนข้อความเหล่านั้นให้กลายเป็นคำอ่าน เช่น พ.ศ. -> พอศอ ไม่ให้เหลืออักษรพิเศษหรือตัวเลข เสร็จแล้วมาตัดคำโดยใช้ PyThaiNLP และเว้นชื่อไฟล์ตามรูปแบบของ prompts.tsv
 
-แต่ถ้าไม่อยากกำกับเอง ผมทำไว้แล้วที่ https://gist.github.com/wannaphongcom/47b9b3618b2e54d88be39d5425be3795 เป็นไฟล์ csv แบ่งด้วย | ประกอบด้วย ชื่อไฟล์|ข้อความ|ข้อความคำอ่าน และแปลงเป็นไฟล์ prompts.tsv ได้ด้วยโค้ด
+แต่ถ้าไม่อยากกำกับเอง ผมทำไว้แล้วที่ https://gist.github.com/wannaphong/47b9b3618b2e54d88be39d5425be3795 เป็นไฟล์ csv แบ่งด้วย | ประกอบด้วย ชื่อไฟล์|ข้อความ|ข้อความคำอ่าน และแปลงเป็นไฟล์ prompts.tsv ได้ด้วยโค้ด
 
 ```python
 from pythainlp.tokenize import word_tokenize
