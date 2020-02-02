@@ -2,7 +2,7 @@
 
 *Open Source Thai Text to Speech*
 
-I build Thai text to speech from [Language Resources (Google) tools](https://github.com/google/language-resources). You can use Thai TTS in docker.
+I build Thai text to speech from [Language Resources (Google) tools](https://github.com/google/language-resources). You can use Thai TTS in ```docker```.
 
 ***Please create a voice dataset and re-train if used for business purposes.***
 
@@ -27,7 +27,9 @@ Use :
 http://127.0.0.1:5000/tts?text=ทดสอบ ระบบ
 ```
 
-Leave a space between words and Use Thai words only.
+You must leave spaces between words and you must use Thai words only.
+
+***It need to a word segmentation.***
 
 ## Audio Example
 
